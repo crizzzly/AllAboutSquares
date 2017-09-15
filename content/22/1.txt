@@ -1,0 +1,9 @@
+Hier wurde in einer Schleife je ein Reckteck erzeugt, dessen X-Koordinate und Rotationswinkel abhängig vom Iterator (zählt die Schleifendurchläufe) ist.
+<code>
+for (var i = 0; i<15; i++){
+
+	var angle = i*5;
+	var xpos = i*40;
+	createNode("rect", {x:0, y:0, width:100, height:100, fill:"black", opacity:0.8, transform:"translate("+xpos+", 300), rotate("+angle+"), scale(0.1, 1), translate(-50, -50)"});
+}
+</code>

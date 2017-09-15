@@ -1,0 +1,25 @@
+Um dies zu erzeugen, muss man die Höhe (bzw Skalierung in y-Richtung) abhängig von der Sinuskurve und der Position des Mauszeigers machen.
+<code>
+var rects = [];
+
+for (var i = 0; i<100;i++){
+	var r = createNode("rect", {width:100, height:100});
+	rects.push(r);
+}
+var ani = function(){
+
+	var sy = 0.1;
+	var test = 1;
+
+  for (var i = 0; i<rects.length; i++){
+
+  	var xpos = i*5+5//map((Mouse.x*i), 0, 6000, 0, 600);
+  	var ypos = 300;
+    var sy = 2*Math.sin((Mouse.x*i)/5);
+
+  	rects[i].setAttribute("transform", "translate("+xpos+", "+ypos+") rotate(0) scale (0.01, "+sy+") translate(-50, -50)");
+  }
+}
+
+animate(ani);
+</code>

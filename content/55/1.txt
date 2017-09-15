@@ -1,0 +1,4 @@
+...Wenn man die Sinusfunktion das erste mal nutzt und die Werte nicht richtig angepasst hat...
+<code>
+scale = 0.5*Math.sin(f)+0.2;
+</code>

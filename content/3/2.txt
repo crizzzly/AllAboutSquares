@@ -1,0 +1,1 @@
+Hier habe ich das n&auml;chste wieder um 20° gedreht, so weit skaliert, bis die Ecken des kleineren Quadrats die Kanten des größeren berühren und anschließend um 11 Pixel nach rechts und um 13 Pixel nach oben verschoben. 

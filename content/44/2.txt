@@ -1,0 +1,27 @@
+Das selbe Ergebnis erhält man, wenn man die Quadrate zuerst in ein Array speichert, später dann die Transformationen anwendet
+<code>
+var rects = [];
+for (var i = 0; i<15; i++){
+	var r = createNode("rect", {width:100, height:100}); //speichert aktuell in Loop erzeugtes Rechteck in Variable r
+
+	rects.push(r); //hängt das erzeugte quadrat, das in r gespeichert ist, an das array ran.
+	//Konsole im browser öffnen, "rects" in Eingabefeld & enter zeigt alle im loop erzeugten quadrate in der konsole an. 
+}
+
+//animation erzeugen: 
+var ani = function (){
+	var sy = 1;
+
+	for (var i = 0; i< rects.length; i++){
+		var xpos = i * map(Mouse.x, 0, 600, 20, 50) +30;
+		var winkel = i * (Mouse.y/10);
+
+		rects[i].setAttribute("transform", "translate("+xpos+", 200) rotate("+winkel+") scale(0.2, "+sy+") translate(-50, -50)");
+
+		sy = sy*0.9;
+	}	
+}
+
+animate(ani);
+
+</code>

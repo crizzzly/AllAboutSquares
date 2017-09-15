@@ -1,0 +1,14 @@
+Hier wird in der Mitte des Rechtecks gedreht.
+<code>
+for (var i = 0; i<rects.length; i++){
+   sy*=0.99;
+
+  var calc = (i*15)+30;
+  var xpos = map(calc, 0, 600, 100, 300);
+  var ypos = 300;
+
+  var rotation = i*5;
+
+  rects[i].setAttribute("transform", "translate("+xpos+", "+ypos+")rotate("+rotation+")  scale ("+sx+","+sy+") rotate("+rotation+") translate(-50, -50)");
+}
+</code>

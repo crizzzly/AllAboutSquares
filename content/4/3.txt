@@ -1,0 +1,1 @@
+Wenn man nun die Verschiebung wieder um einen festen Wert, hier 10 Pixel, vornimmt, und auf 83,33% skaliert, erhält man ne schöne "lange Nase".

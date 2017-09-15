@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="600px" height="300px" viewBox="0 0 600 300" enable-background="new 0 0 600 300" xml:space="preserve">
+<rect x="11.5" y="70.5" stroke="#FFFFFF" stroke-miterlimit="10" width="7" height="110"/>
+<rect x="11.5" y="70.5" stroke="#FFFFFF" stroke-miterlimit="10" width="7" height="110"/>
+<polygon stroke="#FFFFFF" stroke-miterlimit="10" points="67.558,175.522 61.043,178.559 31.701,75.331 38.215,72.294 "/>
+<polygon stroke="#FFFFFF" stroke-miterlimit="10" points="123.173,149.046 119.707,156.734 45.411,101.808 48.877,94.12 "/>
+<polygon stroke="#FFFFFF" stroke-miterlimit="10" points="154.37,94.12 157.836,101.808 83.54,156.734 80.073,149.046 "/>
+<polygon stroke="#FFFFFF" stroke-miterlimit="10" points="135.689,75.331 142.204,72.294 171.546,175.522 165.032,178.559 "/>
+<polygon stroke="#FFFFFF" stroke-miterlimit="10" points="152.865,156.734 149.399,149.046 223.695,94.12 227.162,101.807 "/>
+<polygon stroke="#FFFFFF" stroke-miterlimit="10" points="261.825,149.046 258.358,156.734 184.063,101.808 187.528,94.12 "/>
+<polygon stroke="#FFFFFF" stroke-miterlimit="10" points="239.679,75.331 246.192,72.295 275.535,175.522 269.021,178.56 "/>
+<rect x="288.5" y="70.5" stroke="#FFFFFF" stroke-miterlimit="10" width="7" height="110"/>
+<polygon stroke="#FFFFFF" stroke-miterlimit="10" points="351.849,80.498 357.16,86.203 302.015,170.356 296.704,164.65 "/>
+<polygon stroke="#FFFFFF" stroke-miterlimit="10" points="318.749,120.26 319.953,111.518 404.44,130.593 403.236,139.336 "/>
+<rect x="392.5" y="70.5" stroke="#FFFFFF" stroke-miterlimit="10" width="7" height="110"/>
+<polygon stroke="#FFFFFF" stroke-miterlimit="10" points="473.766,130.593 472.562,139.335 388.075,120.26 389.278,111.518 "/>
+<polygon stroke="#FFFFFF" stroke-miterlimit="10" points="490.5,80.498 495.811,86.203 440.666,170.356 435.355,164.651 "/>
+<rect x="496.5" y="70.5" stroke="#FFFFFF" stroke-miterlimit="10" width="7" height="110"/>
+<polygon stroke="#FFFFFF" stroke-miterlimit="10" points="516.98,75.331 523.495,72.294 552.837,175.522 546.323,178.559 "/>
+<polygon stroke="#FFFFFF" stroke-miterlimit="10" points="551.643,75.331 558.158,72.294 587.5,175.522 580.985,178.559 "/>
+<rect x="-282" y="100.734" fill="none" width="282" height="138"/>
+<text transform="matrix(1 0 0 1 -282 109.2539)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="12">verschieben um 30 pc, drehen um 20°, bei jedem Schritt </tspan><tspan x="0" y="14.4" font-family="'MyriadPro-Regular'" font-size="12">um 20° erhöhen, ab 160° wieder um 20° verringern </tspan></text>
+</svg>

@@ -1,0 +1,1 @@
+Sehr wenig kommt plötzlich heraus, wenn mann die Seitel&auml;nge mit einem festen Wert von 25 Pixel verringert. Das jeweils folgende Quadrat wurde hier um 30° gedreht und verschoben, bis der Mittelpunkt auf der rechten Kante des vorherigen Quadrats lag.

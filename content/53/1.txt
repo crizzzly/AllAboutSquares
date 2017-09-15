@@ -1,0 +1,12 @@
+Plötzlich braucht man viel weniger Variablen und auch weniger Code. Und das Ergebnis sieht eleganter aus!
+<code>
+for (var i = 0; i < 11; i++){
+	for(var j = 0; j<11; j++){
+		scale = (0.5*Math.sin(f/4)+0.2)/2;
+				
+			var xpos = i*50+50;
+			var ypos = j*50+50;
+			createNode('rect', {height:100, width:100, transform:"translate("+xpos+","+ypos+"),  scale("+scale+"), rotate("+rot+"), translate(-50, -50)"});
+	}
+}
+</code>

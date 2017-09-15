@@ -1,0 +1,1 @@
+Um einen Teil der Möglichkeiten abzuschließen, hier nun die Kombination aus Drehung(30°), Verschiebung(30 Pixel), Skalierung(75% +n), wobei n sich mit jedem Schritt um 5% erhöht.

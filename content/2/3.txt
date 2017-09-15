@@ -1,0 +1,1 @@
+Viel lockerer sieht die Reihe aus, wenn man die Verschiebung auf einen festen Wert, hier 30 Pixel, legt. Die restlichen Werte (Skalierung und Drehung) blieben konstant.

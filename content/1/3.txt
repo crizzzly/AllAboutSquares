@@ -1,0 +1,20 @@
+In der n&auml;chsten Reihe wurde das folgende Quadrat ebenso um 38 px verschoben und zunächst auf 90% skaliert, jedoch wurde die Skalierung mit jedem Schritt um 5% erhöht.
+
+<!-- An image will be scaled to 600 pixels width. The height is automatically adjusted.
+
+You might also use a code tag to explain some part of your code in this text. Although it's a quite condensed font to display the code, the lines might not fit in the coloumn. In these cases please care about proper line breaks and indentation. Use spaces, not tabs for indentation.
+<code>
+<g transform="rotate(0 300 300)">
+  <rect x="285" y="105" width="30" 
+        height="30"/>
+  <rect x="285" y="150" width="30" 
+        height="30"/>
+  <rect x="285" y="195" width="30" 
+        height="30"/>
+  ...
+  <rect x="285" y="420" width="30" 
+        height="30"/>
+  <rect x="285" y="465" width="30" 
+        height="30"/>
+</g>
+</code> -->

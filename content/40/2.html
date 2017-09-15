@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GMYND Sketch</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../../lib/gmynd_base.css">
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600"></svg>
+
+<div>
+animieren mit array
+</div>
+
+<script src="../../lib/gmynd.js" type="text/javascript"></script>
+<script type="text/javascript">
+// ==== Put your scripts here ====
+
+//in arrays können in js beliebig viele werte und verschiedene Datentypen enthalten:
+// a = [ 3, 7, 4, "Hallo" ]
+// a[1] = 7, a[0] = 3
+//a.sort(); sortiert das Array nach Zahlenwerten
+//a.push(20); fügt die 20 an hinterster Stelle an das array an
+//a.pop(); holt letzte Zahl aus dem array raus
+//rects.length 
+
+var rects = [];
+for (var i = 0; i<15; i++){
+	var r = createNode("rect", {width:100, height:100}); //speichert aktuell in Loop erzeugtes Rechteck in Variable r
+
+	rects.push(r); //hängt das erzeugte quadrat, das in r gespeichert ist, an das array ran.
+	//Konsole im browser öffnen, "rects" in Eingabefeld & enter zeigt alle im loop erzeugten quadrate in der konsole an. 
+}
+
+//animation erzeugen: 
+var ani = function (){
+	var sy = 1;
+
+	for (var i = 0; i< rects.length; i++){
+		var xpos = i * map(Mouse.x, 0, 600, 20, 50) +30;
+		var winkel = i * (Mouse.y/10);
+
+		rects[i].setAttribute("transform", "translate("+xpos+", 200) rotate("+winkel+") scale(0.2, "+sy+") translate(-50, -50)");
+
+		sy = sy*0.9;
+	}	
+}
+
+animate(ani);
+
+
+
+// ======== End of scripts =======
+</script>
+
+</body>
+</html>

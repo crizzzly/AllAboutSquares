@@ -1,0 +1,13 @@
+Die Reihen kann man ebenso im Kreis herum wandern lassen!
+Hierzu sollte man die Drehachse in die Mitte der Unterkante legen (translate(-50, -100)) und den Rotationswinkel mit i verknüpfen.
+Das weiße Feld in der Mitte entsteht durch ein weißes Quadrat, das darüber gezeichnet wird.
+<code>
+for (var i = 20; i <= 360; i+=20){
+createNode("rect", {x:0, y:0, width:100, height:100, transform:"translate(300, 300), rotate ("+i+"), scale (0.2, 2), translate(-50, -100)"});
+}
+
+for (var i = 0; i <= 360; i+=20){
+createNode("rect", {x:0, y:0, width:100, height:100, fill:"white", transform:"translate(300, 300), scale(0.5, 0.5), rotate ("+i+"), translate(-50, -50)"});
+}
+
+</code>

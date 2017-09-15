@@ -1,0 +1,1 @@
+Hier ebenso recht einfach gehalten. Skalierung - wie gehabt - 80% +5%, Verschiebung dieses Mal, bis der Mittelpunkt des zweiten auf der rechten Kante des ersten Quadrats liegt.

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GMYND Sketch</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../../lib/gmynd_base.css">
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600"></svg>
+
+<div>
+"ich sehe schwarze Punkte"
+</div>
+
+<script src="../lib/gmynd.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+var ani = function(f){
+	if(f>400){
+		exit;
+	}
+	
+
+	var scale = 0.4;
+
+	for (var i = 0; i < 11; i++){
+
+
+		for(var j = 0; j<11; j++){
+				var xpos = i*50+50;
+				var ypos = j*50+50;
+				createNode('rect', {height:100, width:100, transform:"translate("+xpos+","+ypos+"), rotate("+f+") scale("+scale+"), translate(-50, -50)"});
+		}
+	}
+}
+
+animate(ani);
+
+</script>
+
+</body>
+</html>

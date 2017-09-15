@@ -1,0 +1,9 @@
+Damit wieder jedes 2. Quadrat ne andere Gr&ouml;ße hat, setzt man einfach bei scaleKleiner die Sinusfunktion, bei scaleGr&ouml;ßer die Cosinusfunktion ein!
+<code>
+if ((i + j) % 2 == 0){
+	scale = 0.2*Math.sin(f/4)+0.2;
+	}
+else{
+	scale = 0.2*Math.cos(f/4)+0.2;
+}
+</code>

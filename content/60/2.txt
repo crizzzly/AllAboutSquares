@@ -1,0 +1,29 @@
+Da nur schwarz auf Dauer langweilig wird, dachte ich mir, ich baue mal etwas Farbe ein. Der erste Versuch, die Farbe selbst zu generieren, scheiterte an den Farbwerten, die auf Anhieb zumindest keine schönen Farbkombinationen lieferte. Zum Glück hat das schon jemand für mich gemacht, so konnte ich mir einfach den Code kopieren und einfügen:
+<code>
+//Funktionen, um Farbwerte von R-G-B in Hexadezimalwerte umzurechnen
+function componenToHex(c){
+	var hex = c.toString(16);
+	return hex.length == 1 ? "0" + hex: hex;
+}
+function RgbToHex(r, g, b){
+	return "#"+ componenToHex(r)+""+ componenToHex (g)+"" + componenToHex(b)+"";
+}
+
+//Farbwerte berechnen
+var frequency = .3; //um die Farbwerte in Abhängigkeit der Sinuswelle zu ändern
+var r =  Math.sin(frequency + 0) * 127 + 128;
+var g = Math.sin(frequency + 2) * 127 + 128;
+var b =  Math.sin(frequency + 4) * 127 + 128;
+
+//"Regenbogen" aus Sinuswelle kreieren, mittels den Funktionen in Hexadezimalwerte umrechnen und der Variable "farbe" zuweisen
+//create rainbow by sine waves
+r = Math.floor(Math.sin(frequency*(i%32)+ 0) * 127 + 128);
+g = Math.floor(Math.sin(frequency*(i%32) + 2) * 127 + 128);
+b = Math.floor(Math.sin(frequency*(i%32) + 4) * 127 + 128);
+var farbe = RgbToHex(r, g, b);
+</code>
+Zudem habe ich die Formeln zur Berechnung der Rotation und der Größe mit der "map"-Funktion etwas angepasst:
+<code>
+var rotation = map((i*(f/10)*Mouse.y), 0, 6000, 0, 360);
+var size = map((scale * Mouse.x), 0, 2400, 0, 10);
+</code>

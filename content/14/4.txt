@@ -1,0 +1,2 @@
+Drehen um 10°
+skalieren auf 90%

@@ -1,0 +1,1 @@
+wenn man bei gleich bleibender Skalierung die Verschiebung wieder relativ wählt und, wie hier, den Mittelpunkt auf die Kante legt, erhält man eine schöne, kompakte, ebenso endlos werdende Reihe.

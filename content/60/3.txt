@@ -1,0 +1,24 @@
+Hier eine Version, in der die Animation automatisch abläuft. Die Drehung ist abhängig von i*f(also der Iterationsnummer der Schleife und der Anzahl, wie oft die Animation bereits aufgerufen wurde). Damit keine zu hohen Werte für die Rotation entstehen, habe ich diese mit der "map"-Funktion angepasst.
+<code>
+var ani = function(){
+	var scale = 6;
+
+	for(var i = 0; i<rectslength; i++){
+		var rotation = map((i*f), 0, 750, 0, 360);
+
+		rects[i].setAttribute("transform", "translate(300,300), rotate("+rotation+"), scale ("+scale+"), translate(-50, -50)");
+		rects[i].setAttribute("fill", farbe);
+
+		scale *= 0.9;
+	}
+}
+animate(ani);
+</code>
+Da die Farbe in der vorherigen Version von innen nach außen sehr konstant blieb, habe ich bei die Berechnung der Farbwerte zusätzlich abhängig von i gemacht. So hat man nun das Gefühl, man taucht in die Regenbogenwelt ein.
+<code>
+r = Math.floor(Math.sin(frequency*((i+f)%32) + 0) * 127 + 128);
+g = Math.floor(Math.sin(frequency*((i+f)%32) + 2) * 127 + 128);
+b = Math.floor(Math.sin(frequency*((i+f)%32) + 4) * 127 + 128);
+
+var farbe = RgbToHex(r, g, b);
+</code>

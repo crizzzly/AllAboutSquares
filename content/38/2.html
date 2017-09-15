@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GMYND Sketch</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../../lib/gmynd_base.css">
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600"></svg>
+
+<div>
+  translate(0,100), ypos = 100
+</div>
+
+<script src="../../lib/gmynd.js" type="text/javascript"></script>
+<script type="text/javascript">
+createNode("rect", {x:0, y:0, width:600, height:600, fill:"black"});
+
+function componenToHex(c){
+  var hex = c.toString(16);
+  return hex.length == 1 ? "0" + hex: hex;
+}
+function RgbToHex(r, g, b){
+  return "#"+ componenToHex(r)+""+ componenToHex (g)+"" + componenToHex(b)+"";
+}
+
+
+var rects = [];
+var rects2 = [];
+
+for (var i = 0; i<100;i++){
+	var r = createNode("rect", {width:100, height:100});
+	rects.push(r);
+  var v = createNode("rect", {width:100, height:100, color:"#0000ff"});
+  rects2.push(v);
+}
+    var sx = 0.01;
+    var sy = 10;
+
+
+var ani = function(f){
+if (f >400){
+   ani.break;
+ }
+
+var frequency = .3; //used for change colors by sine wave
+var n = 0; //for counting in loop and set back to 0 if equal than 32
+
+var rot =  Math.sin(frequency + 0) * 127 + 128;
+var gelb= Math.sin(frequency + 2) * 127 + 128;
+var blau =  Math.sin(frequency + 4) * 127 + 128;
+
+
+  for (var i = 0; i<rects.length; i++){
+    for(var j = 0; j<10; j++){
+      r = Math.floor(Math.sin(frequency*(i%32) + 0) * 127 + 128);
+     g = Math.floor(Math.sin(frequency*(i%32) + 2) * 127 + 128);
+     b = Math.floor(Math.sin(frequency*(i%32)+ 4) * 127 + 128);
+     var farbe = RgbToHex(r, g, b);
+
+    sy*=0.99;
+
+  	var calc = (i*5)+200;
+    var xpos = calc;//map(calc, 0, 1200, 0, 600);
+    var calc =(j*10)+200;
+    var x2 = map((j*10+200), 200, 300, 600, 0);
+  	var ypos = 250;//+ j*10;
+
+    var tx=400*Math.sin(f/20);
+
+    var rotation = map((i*f), 0, 10000, -360, 360);//i*5;
+    var rot = map((j*f), 0, 10000, -360, 360);//i*5;
+
+  	rects[i].setAttribute("transform", "translate("+xpos+", "+ypos+")rotate("+rotation+")  scale ("+sx+","+sy+") rotate("+rotation+") translate(0, "+tx+")");
+    rects[i].setAttribute("fill", farbe);
+    rects2[i].setAttribute("transform", "translate("+xpos+", "+ypos+")rotate("+rotation+")  scale ("+(-sx)+","+(-sy)+") rotate("+rot+") translate("+tx+",0)");
+    rects2[i].setAttribute("fill", farbe);
+  }
+  }
+  sy = 10;
+}
+
+animate(ani);
+
+
+</script>
+
+</body>
+</html>

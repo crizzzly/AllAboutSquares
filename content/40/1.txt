@@ -1,0 +1,21 @@
+Hier wurde zuerst eine Reihe Quadrate in nem Loop erzeugt. Die Variable für die Position auf der X-Achse wird dann mit der X-Position der Maus und mit dem Iterator i verknüpft, sodass sich die X-Position relativ zur Mausposition verändert.
+Selbes geschieht mit dem Rotationswinkel. Dieser wird allerdings mit der Y-Position der Maus verknüpft.
+Wie man am Ergebnis sehen kann, verändert sich die Position der Rechtecke, wenn man mit der Maus nach rechts oder links fährt, die Rotation, wenn man nach oben oder unten fährt.
+<code>
+var ani = function (){
+
+  clearAll(); //Erzeugt alle Quadrate jedes mal, wenn das Frame neu geladen wird
+
+  var sy = 1;
+  for (var i = 0; i<15; i++){
+    var xpos = i * Mouse.x; //via Mouse.x interaktion via Mausposition. Verändert Position auf x-Achse relativ zu x-Position der Maus
+    var winkel = i*(Mouse.y);
+
+    //var sy = math.pow(0.9, i);
+    createNode("rect", {width:100, height:100, transform:"translate("+xpos+", 200) rotate("+winkel+") scale(0.2, "+sy+") translate(-50, -50)"});
+
+    sy = sy*0.9;
+  }
+}
+animate(ani);
+</code>

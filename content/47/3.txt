@@ -1,0 +1,32 @@
+Ausgang dieses Bildes war auch das Sinuseffekt-Bild. Als ich dieses animieren wurde, wurde es plötzlich zu einer Ebene, die sich im Raum gedreht hat. Dort wollte ich dann wieder mit den Drehpunkten gespielt, und das war ein Ergebnis!
+<code>
+var rects = [];
+var rects2 = [];
+
+for (var i = 0; i<100;i++){
+  var r = createNode("rect", {width:100, height:100});
+  rects.push(r);
+}
+    var sx = 0.01;
+    var sy = 5;
+
+
+var ani = function(f){
+
+  for (var i = 0; i<rects.length; i++){
+    sy*=0.99;
+
+    var calc = (i*15)+30;
+    var xpos = map(calc, 0, 1200, 0, 600);
+    var ypos = 250;//+ j*10;
+
+    var tx=100*Math.sin(f/20);
+
+    var rotation = i/5;
+
+    rects[i].setAttribute("transform", "translate("+xpos+", "+ypos+")rotate("+rotation+")  scale ("+sx+","+sy+") rotate("+rotation+") translate(100, "+tx+")");
+    }
+  sy = 3;
+}
+animate(ani);
+</code>

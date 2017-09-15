@@ -1,0 +1,15 @@
+Und in diesem Beispiel in der Ecke rechts unten.
+<code>
+ for (var i = 0; i<rects.length; i++){
+  //sx *=0.95;
+  sy*=0.99;
+
+	var calc = (i*10);
+  var xpos = map(calc, 0, 600, 100, 300);
+ 	var ypos = 400;
+
+  var rotation = i*5;
+
+	rects[i].setAttribute("transform", "translate("+xpos+", "+ypos+")rotate("+rotation+")  scale ("+sx+","+sy+") rotate("+rotation+") translate(-100, -100)");
+}
+</code>

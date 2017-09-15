@@ -1,0 +1,28 @@
+Zweite Variante zum obigen Beispiel
+<code>
+var rects = [];
+
+for (var i = 0; i<16;i++){
+	var r = createNode("rect", {width:100, height:100, stroke:"white"});
+	rects.push(r);
+}
+
+var veraenderung = 0.2;
+var test = 1;
+
+ for (var i = 0; i<rects.length; i++){
+  var sy = (2*Math.cos(i/20));
+
+ 	var xpos = (i*37)+22;
+ 	var ypos = 300;
+
+   var rotation = 0-6*i;//Math.sin(i/20);
+
+ 	rects[i].setAttribute("transform", "translate("+xpos+", "+ypos+")  scale(0.3, 0.8) rotate("+rotation+") translate(-50, -50)");
+ 	//sy += veraenderung;
+  	
+ 	if ((i+1)%5 == 0 ){
+	veraenderung *= -1;
+ 	}
+}
+</code>

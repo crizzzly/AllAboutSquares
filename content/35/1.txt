@@ -1,0 +1,16 @@
+Dies passiert, wenn man in einem (i&j)-loop zwei Arrays mit Rechtecken erstellt, dessen Rotationsachse entgegengesetzt positioniert.
+<code>
+var calc = (i*5)+200;
+var xpos = calc;//map(calc, 0, 1200, 0, 600);
+var calc =(j*10)+200;
+var x2 = map((j*10+200), 200, 300, 600, 0);
+var ypos = 250;//+ j*10;
+
+var tx=400*Math.sin(f/20);
+
+var rotation = map((i*f), 0, 10000, -360, 360);//i*5;
+var rot = map((j*f), 0, 10000, -360, 360);//i*5;
+
+rects[i].setAttribute("transform", "translate("+xpos+", "+ypos+")rotate("+rotation+")  scale ("+sx+","+sy+") rotate("+rotation+") translate(0, "+tx+")");
+rects2[i].setAttribute("transform", "translate("+xpos+", "+ypos+")rotate("+rotation+")  scale ("+(-sx)+","+(-sy)+") rotate("+rot+") translate("+tx+",0)");
+</code>

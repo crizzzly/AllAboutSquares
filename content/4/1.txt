@@ -1,0 +1,1 @@
+In diesem Beispiel wurden lediglich die Seitenl&auml;ngen, ausgehend vom Mittelpunkt, immer um 20 Pixel verringert, anschließend wurde das Quadrat um 20 Pixel nach rechts verschoben.

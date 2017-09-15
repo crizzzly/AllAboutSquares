@@ -1,0 +1,1 @@
+	1.1: Drehung mit Verschiebung auf der X-Achse

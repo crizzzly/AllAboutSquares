@@ -1,0 +1,31 @@
+Das Bild mit dem Sinuseffekt aus dem letzten Kapitel musste ich natürlich auch ausprobieren.
+Allerdings kann ich mir das Ergebnis nicht so wirklich erklären.
+<code>
+var rects = [];
+
+for (var i = 0; i<100;i++){
+  var r = createNode("rect", {width:100, height:100});
+  rects.push(r);
+}
+    var sx = 0.03;
+    var sy = 3;
+
+var ani = function(f){
+  if(f>300){
+    exit;
+  }
+
+  for (var i = 0; i<rects.length; i++){
+    sy = Math.sin(f%(Mouse.x*10));
+
+    var calc = (i*10)+30;
+    var xpos = map(calc, 0, 600, 0, 300);
+    var ypos = 300;
+
+    var rotation = (i+2)*2;
+
+    rects[i].setAttribute("transform", "translate("+xpos+", "+ypos+") scale ("+sx+","+sy+") rotate("+rotation+") translate(-0, -0)");
+  }
+}
+animate(ani);
+</code>

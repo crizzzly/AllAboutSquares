@@ -1,0 +1,20 @@
+<code>
+var ani = function(f){
+  if (f>600){
+    exit;
+  }
+  if (f%6 == 0){
+  for (var i = 0; i<200; i++){
+     sy = Math.sin(f)//*=0.9;
+
+    var xpos = (i*5)+10;
+    var ypos = 300;
+
+    var rotation = map((i*2), 0, 500, -360, 360);
+
+    createNode("rect", {width:100, height:100, transform:"translate("+xpos+", "+ypos+")  rotate("+rotation+") scale( "+sx+","+sy+") translate(100,100)"});
+  }
+}
+}
+animate(ani);
+</code>

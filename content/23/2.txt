@@ -1,0 +1,9 @@
+Dieser nette Effekt entsteht durch die Funktion Math.abs(), welche den Betrag einer Zahl zurück gibt. Für alle, bei denen Mathe schon ne Weile her ist: Der Betrag einer Zahl ist immer der positive Wert der Zahl.
+<code>
+var sx = 0.2;
+var sy = 1;
+for (var i = 0; i<=15; i++){
+  var xpos = i*40;
+  var ypos = Math.abs(Math.sin(i * 24/180*Math.PI) ) * 100 +300;
+}
+</code>

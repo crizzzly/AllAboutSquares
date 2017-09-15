@@ -1,0 +1,13 @@
+Hier wandert die y-Koordinate der Sinuskurve entlang. 
+Ein zweites Quadrat, hier leicht transparent dargestellt, wandert die -Sinuskurve entlang
+<code>
+for (var i = 0; i <=15; i++){
+  var xpos = i*40;
+  var ypos = Math.sin (i*12) * 100 +300;
+  var y2 = -Math.sin (i*12) * 100 +300;
+
+  createNode("rect", {width:100, height:100, transform:"translate("+xpos+", "+ypos+" ) rotate(0) scale (0.3) translate(-50, -50)"});
+
+  createNode("rect", {width:100, height:100, opacity:0.8, transform:"translate("+xpos+", "+y2+" ) rotate(0) scale (0.3) translate(-50, -50)"});
+}
+</code>

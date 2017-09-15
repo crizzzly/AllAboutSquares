@@ -1,0 +1,11 @@
+Ein einfaches Grid mit Quadraten in der selben Größe. Um dies zu generieren, muss man 2 loops ineinander setzen. Einen für eine Zeile, einen, um die Zeile in der nächsten Zeile zu wiederholen.
+<code>
+var scale = 0.4;
+for (var i = 0; i < 11; i++){
+	for(var j = 0; j<11; j++){
+		var xpos = i*50+50;
+		var ypos = j*50+50;
+		createNode('rect', {height:100, width:100, transform:"translate("+xpos+","+ypos+"), scale("+scale+"), translate(-50, -50)"});
+	}
+}
+</code>

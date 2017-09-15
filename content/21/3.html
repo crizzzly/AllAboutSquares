@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GMYND Sketch</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../../lib/gmynd_base.css">
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400"></svg>
+
+<div>
+  Drehen, skalieren, verschieben
+</div>
+
+<script src="../lib/gmynd.js" type="text/javascript"></script>
+<script type="text/javascript">
+// ==== Put your scripts here ====
+
+
+//30° drehen, 30px verschieben, 75% skalieren & immer 5% mehr
+var scale = 1;
+var steps = [0.75];
+var rotation = 0;
+
+for (var i = 0; i<15; i++){
+
+	var xpos = i*30+50;
+	var ypos = 200;
+
+	createNode("rect", {x:0, y:0,height:100, width:100, stroke:"white", transform:"translate("+xpos+","+ypos+"), scale("+scale+"), rotate("+rotation+"), translate(-50, -50)"});
+
+	scale *= steps[i];
+	steps.push(steps[i]+0.05);
+	rotation -= 30;
+}
+
+
+
+
+// ======== End of scripts =======
+</script>
+
+</body>
+</html>

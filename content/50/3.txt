@@ -1,0 +1,21 @@
+Im letzten Beispiel sind nur Quadrate, die in ungeraden Zeilen & Spalten sind, größer wie die anderen:
+<code>
+var scaleKleiner = 0.4;
+var scaleGroesser = 0.5;
+var scale;
+
+for (var i = 0; i < 11; i++){
+	for(var j = 0; j<11; j++){
+		if (j%2 == 0&& i % 2 == 0){
+			scale = scaleKleiner;
+		}
+		else{
+			scale = scaleGroesser;
+		}
+	
+	var xpos = i*50+50;
+	var ypos = j*50+50;
+	createNode('rect', {height:100, width:100, transform:"translate("+xpos+","+ypos+"), scale("+scale+"), translate(-50, -50)"});
+	}
+}
+</code>

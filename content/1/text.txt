@@ -1,0 +1,3 @@
+Heute schauen wir uns mal Quadrate an. Unsere erste Aufgabe war es, diese im Illustrator auf beliebige Weise zu transformieren und dadurch Reihen zu bilden. Speziell daran: auf einen möglichen Anfang der Reihe mussten wir verschiedene logische Regeln definieren, um diese fortzusetzen. Die Regeln durften sich hierbei in der jeweiligen Reihe nicht ändern. Genauso wie die ersten zwei Quadrate der Reihe immer gleich aussehen sollten. 
+
+<!-- This should be the introduction text to Chapter 1. Note that if the text is shorter than 250 characters, it will be shown as a single column. Otherwise it will be shown as two columns. Because this text consists of 251 characters you see two columns. -->

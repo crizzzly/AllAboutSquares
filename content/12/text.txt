@@ -1,0 +1,2 @@
+In diesem Beispiel möchte ich mich nun ganz den Drehachsen widmen, und welche Ausiwirkungen diese auf das Verschieben von Objekten haben.Daher bleiben alle sonstigen Werte bei jedem Beispiel konstant.
+Als Ausgang dient ein Rechteck mit 150 x 10 Pixel - mit weißem Rand. Dies wird bei jedem Schritt auf 99% skaliert, um 5 Pixel verschoben und um 5° gedreht.

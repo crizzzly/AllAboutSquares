@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GMYND Sketch</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../../ib/gmynd_base.css">
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600"></svg>
+
+<div>
+"schwarzes oder weißes Quadrat?"
+</div>
+
+<script src="../lib/gmynd.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+
+var max = 0.5;
+var min = 0.3;
+var scale = 1;
+var scaleKleiner = max;
+var scaleGroesser = min;
+var scale;
+var change = 0.01;
+var rotate = 80;
+
+var ani = function(f){
+	if(f>400){
+		exit;
+	}
+	
+	clearAll();
+
+	scaleGroesser -= change;
+	scaleKleiner += change;
+	for (var i = 0; i < 9; i++){
+
+
+		for(var j = 0; j<9; j++){
+			// if ((i + j) % 2 == 0){
+			// 		scale = scaleGroesser;
+			// 	}
+			// 	else{
+			// 		scale = scaleKleiner;
+			// }
+			var xpos = i*60+60;
+			var ypos = j*70+55;
+
+			var dx = Mouse.x-xpos;
+			var dy = Mouse.y-ypos;
+			var s = scale - Math.sqrt(dx*dx + dy*dy) / 200;
+
+			rotation = Math.sqrt(dx*dx/36 + dy*dy/36);
+
+			//scale *= map(Mouse.x, 0, 600, min, max);
+
+			rotate = map(Mouse.x, 0, 600, -180, 180);
+			createNode('rect', {height:100, width:100, transform:"translate("+xpos+","+ypos+"), rotate("+rotate+"), scale("+s+"),  translate("+(dx-20)+","+(dy-20)+")"});
+		}
+	}
+	if (scale > max){
+		change *= -1;
+	}
+	if (scale < min){
+		change *= -1;
+	}
+}
+animate(ani);
+
+</script>
+
+</body>
+</html>

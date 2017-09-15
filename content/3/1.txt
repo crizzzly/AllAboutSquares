@@ -1,0 +1,1 @@
+Hier habe ich das n&auml;chste Quadrat immer um 20° gedreht, auf 80% skaliert und anfangs diagonal nach rechts oben verschoben, bis die Ecke des zweiten Quadrats auf der Kante des ersten lag. 

@@ -1,0 +1,12 @@
+Hier wurde mal gezeigt, wie man den Modulo-Operator einsetzen kann. Um Elemente in einer Reihe versetzt anzeigen zu können ist dies wohl die einfachste Lösung:
+<code>
+// jedes 3. Quadrat auf andere y-pos setzen
+if (i%3 == 0){
+	ypos = 250;
+}
+  
+// jedes 2. Quadrat auf andere y-pos setzen
+if (i%2 == 0){
+  	ypos = 250;
+}
+</code>

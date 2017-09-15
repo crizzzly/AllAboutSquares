@@ -1,0 +1,4 @@
+...wenn man als Rotationswert 3*f eingibt...
+<code>
+createNode('rect', {height:100, width:100, transform:"translate("+xpos+","+ypos+"),  scale("+scale+"), rotate("+3*f+"), translate(-50, -50)"});
+</code>

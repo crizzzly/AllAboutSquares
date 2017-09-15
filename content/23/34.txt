@@ -1,0 +1,17 @@
+Hier ein Beispiel aus Kapitel 1.2
+
+<code>
+var scale = 1;
+var rotation = 0;
+
+for (var i = 0; i<15; i++){
+
+	var xpos = i*30+50;
+	var ypos = 100;
+
+	createNode("rect", {x:0, y:0,height:100, width:100, stroke:"white", transform:"translate("+xpos+","+ypos+"), scale("+scale+"), rotate("+rotation+"), translate(-50, -50)"})
+
+	scale *= 0.75;
+	rotation -= 30;
+}
+</code>

@@ -1,0 +1,7 @@
+Auch wollte ich mal wissen, was passiert, wenn man 2 identische Reihen mit anderem Drehpunkt zusammen laufen lässt.
+<code>
+rects[i].setAttribute("transform", "translate("+xpos+", "+ypos+")rotate("+rotation+")  scale ("+sx+","+sy+") rotate("+rotation+") translate(0, "+tx+")");
+rects[i].setAttribute("fill", farbe);
+rects2[i].setAttribute("transform", "translate("+xpos+", "+ypos+")rotate("+rotation+")  scale ("+(-sx)+","+(-sy)+") rotate("+rot+") translate("+tx+",0)");
+rects2[i].setAttribute("fill", farbe);
+</code>

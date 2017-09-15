@@ -1,0 +1,12 @@
+mit folgendem Code erreicht man am einfachsten, dass sich die Quadrate drehen.
+Aber Achtung! Man sollte nicht zu lange drauf schauen. Sonst wird man ganz kirre im Kopf!
+<code>
+var ani = function(f){
+	clearAll();
+
+	...
+
+	createNode('rect', {height:100, width:100, transform:"translate("+xpos+","+ypos+"), rotate("+f+") scale("+scale+"), translate(-50, -50)"});
+}
+animate(ani);
+</code>

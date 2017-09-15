@@ -1,0 +1,29 @@
+Ähnlich dem ersten Beispiel habe ich dieses hier umgesetzt:
+
+<code>
+var rects = [];
+for (var i = 0; i<15;i++){
+  var r = createNode("rect", {width:100, height:100});
+  rects.push(r);
+}
+
+var ani = function(){
+
+  var sy = 0.1;
+  var veraenderung = 0.2;
+
+  for (var i = 0; i<rects.length; i++){
+
+    var xpos = map((Mouse.x*i), 0, 6000, 0, 300);
+    var ypos = 300;
+
+    rects[i].setAttribute("transform", "translate("+xpos+", "+ypos+") rotate(0) scale (0.1, "+sy+") translate(-50, -50)");
+    sy += veraenderung;
+    
+    if ((i+1)%5 == 0 ){
+      veraenderung *= -1;
+    }
+  }
+}
+animate(ani);
+</code>

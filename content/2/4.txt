@@ -1,0 +1,1 @@
+Dieses Mal habe ich geschaut, was passiert, wenn man die Skalierung von 75% mit jedem Schritt um 5% erhöht. Wieder mit der Ausgangssituation, dass das nächste Quadrat mit dem Mittelpunkt auf der Kante des vorherigen liegt und um 30% gedreht wird. 

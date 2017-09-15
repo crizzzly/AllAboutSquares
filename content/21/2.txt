@@ -1,0 +1,18 @@
+
+<code>
+<html>
+var scale = 1;
+var rotation = 0;
+var length = 100;
+
+for (var i = 0; i<15; i++){
+
+	var xpos = i*30+50;
+	var ypos = 100;
+
+	createNode("rect", {x:0, y:0,height:length, width:length, stroke:"white", transform:"translate("+xpos+","+ypos+"),  rotate("+rotation+"), translate(-50, -50)"});
+
+	length-=25;
+	rotation -= 30;
+}
+</code>

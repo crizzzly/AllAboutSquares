@@ -1,0 +1,2 @@
+Dieses schöne Muster entstand durch ganz einfache Variablen:
+Skalierung auf 75%, Drehung um 45%

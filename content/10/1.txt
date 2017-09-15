@@ -1,0 +1,1 @@
+Hier wurde ein Rechteck mit 30 x 50 px erzeugt, kopiert und die Kopie um 40 px nach rechts verschoben und dabei beidseitig auf 90% skaliert

@@ -1,0 +1,1 @@
+Eine bestimmt endlos werdende Reihe erhält man, wenn man konstant auf 80% skaliert und um einen festen Wert (30 Pixel) verschiebt. 

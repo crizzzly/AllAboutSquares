@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Dokumentation</title>
+</head>
+<link rel="stylesheet" type="text/css" href="lib/style.css">
+<script type="text/javascript" src="lib/underscore.js"></script>
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script type="text/javascript" src="lib/processing.js"></script>
+<script type="text/javascript" src="lib/handlebars.js"></script>
+<script type="text/javascript" src="lib/dummyData.js"></script>
+<body>
+
+</body>
+<script id="section-template" type="text/x-handlebars-template">
+  <p class="logo">
+    <span style="color:#f00"><b>H<span class="invis">ochschule</span> f<span class="invis">ür</span> G<span class="invis">estaltung</span></b></span><br><br><br>
+    <b>Hochschule für Gestaltung</b><br><br>
+    <b>Schwäbisch Gmünd</b>
+  </p>
+
+  <div class="left-col">
+    <div class="header">
+      <p>
+        <b>{{course}}</b><br>
+        {{semester}}<br>
+        {{teacher}}
+      </p>
+      <p>
+        Dokumentation von<br> 
+        <b>{{student}}</b>
+      </p>
+    </div>
+
+    <div class="menu">
+      {{#each sections}}
+        <div class="menu-entry">{{{title}}}</div>
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="content">
+    {{#each sections}}
+      <div class="chapter">
+
+        {{#if text}}
+        <div class="section">
+          {{!-- <h3>{{title}}</h3> --}}
+          <div class="text t3">{{{text}}}</div>
+        </div> 
+        {{/if}}
+
+        {{#each files}}
+          <div class="section">
+
+            {{#if url}}
+
+              <div class="text t1">
+                {{{text}}}
+
+                {{#if isPDE}}
+                  <p class="reset-button" onclick="resetSketch(this)" data-url="{{url}}">Sketch neu starten</p>
+                {{else}}
+                  {{#if isHTML}}
+                    <p class="reset-button" onclick="resetHTML(this)" data-url="{{url}}">HTML neu laden</p>
+                  {{else}}
+                    {{#if isSVG}}
+                      <p class="reset-button" onclick="resetSVG(this)" data-url="{{url}}">SVG neu laden</p>
+                    {{/if}}
+                  {{/if}}
+                {{/if}}
+              </div>
+
+              {{#if isPDE}}
+                <canvas class="sketch" data-processing-sources="{{url}}"></canvas>
+              {{else}}
+                {{#if isHTML}}
+                  <iframe class="html" data-src="{{url}}" src="{{url}}" scrolling="no"></iframe> 
+                {{else}}
+                  {{#if isSVG}}
+                    <object class="image svg" data-src="{{url}}" data="{{url}}" type="image/svg+xml"></object>
+                    
+                  {{else}}
+                    <img class="image" src="{{url}}">
+                  {{/if}}
+                {{/if}}
+              {{/if}}
+            
+            {{else}}
+
+              <div class="text t3">
+                {{{text}}}
+              </div>
+
+            {{/if}}
+
+          </div>
+        {{/each}}
+
+        <div class="section"><div class="text t1"></div></div>
+    
+      </div>
+    {{/each}}
+  </div>
+
+</script>
+<script type="text/javascript" src="lib/docify.js"></script>
+<script type="text/javascript" src="lib/behaviour.js"></script>
+</html>

@@ -1,0 +1,14 @@
+Hier liegt der Drehpunkt in der Mitte der linken Außenkante des Rechtecks.
+<code>
+for (var i = 0; i<rects.length; i++){
+	sy*=0.99;
+
+  	var calc = (i*15)+30;
+    var xpos = map(calc, 0, 1200, 200, 600);
+  	var ypos = 300;
+
+    var rotation = i*5;
+
+	rects[i].setAttribute("transform", "translate("+xpos+", "+ypos+")rotate("+rotation+")  scale ("+sx+","+sy+") rotate("+rotation+") translate(0,-50)");
+}
+</code>

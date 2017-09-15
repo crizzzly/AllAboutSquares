@@ -1,0 +1,7 @@
+Hier wurde das zweite Quadrat um 45° gedreht und so weit verschoben, bis die Ecke des 2. Quadrats auf dem Mittelpunkt des ersten Quadrats liegt. Analog wurde die Reihe fortgesetzt.
+
+<!--Explanation for this first image.
+
+Note that there is no border because of the line
+<code><!-- noborder --></code>
+in the svg file. -->

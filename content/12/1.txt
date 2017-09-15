@@ -1,0 +1,3 @@
+Hier ist die Drehachse noch der Mittelpunkt. Daher liegen die Rechtecke auch mit dem Mittelpunkt auf der selben Y-Position.
+
+Sehr schön ist hier zu erkennen, wie durch die Rotation der - doch sehr schmal gehaltenen Elemente, 3-Dimensionalität entsteht. 

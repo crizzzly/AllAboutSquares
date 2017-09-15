@@ -1,0 +1,18 @@
+Der Plan war hier, das erste Beispiel aus Kapitel 2.1 (freie Reihungen) umzusetzen.
+Dazu habe ich in einem Loop gleich zwei Rechtecke erzeugt, die die Elemente von außen nach innen platzieren.
+<code>
+var sx = 0.2;
+var sy = 1;
+for (var i = 0; i<=15; i++){
+
+	var xpos = i*20+20;
+
+	createNode("rect", {x:0, y:0, width:100, height:100, fill:"black", transform:"translate("+xpos+", 300), scale("+sx+","+sy+"), translate(-50, -50)"});
+
+	var x2 = 600-xpos;
+	createNode("rect", {x:0, y:0, width:100, height:100, fill:"black", transform:"translate("+x2+", 300), scale("+sx+","+sy+"), translate(-50, -50)"});
+
+	sx*=0.8;
+	sy*=0.9;
+}
+</code>

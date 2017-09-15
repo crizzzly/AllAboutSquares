@@ -1,0 +1,5 @@
+In diesem Kapitel möchte ich mir nochmals genauer anschauen, welche Auswirkungen der Rotationspunkt auf die Translation hat. 
+Alle Elemente starten in der selben Ausgangssituation: Ein Quadrat wird erzeugt (100x100px), auf 0.1x3 skaliert und dann um (i*15+30) Pixel verschoben.
+Lediglich der Rotationspunkt ändert sich. Gegebenenfalls war es nötig, die x- und y-Koordinaten anzupassen, damit man überhaupt sehen kann, was hier passiert.
+
+Auf dieser Seite liegt der Rotationspunkt auf (0, x).

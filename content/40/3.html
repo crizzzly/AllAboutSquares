@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GMYND Sketch</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../../lib/gmynd_base.css">
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600"></svg>
+
+<div>
+  audio ausgabe
+</div>
+
+<script src="../../lib/gmynd.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+var rects = [];
+for (var i = 0; i<15;i++){
+	var r = createNode("rect", {width:100, height:100});
+	rects.push(r);
+}
+
+var ani = function(){
+
+	var sy = 0.1;
+	var veraenderung = 0.2;
+
+  for (var i = 0; i<rects.length; i++){
+
+  	var xpos = map((Mouse.x*i), 0, 6000, 0, 300);
+  	var ypos = 300;
+
+  	rects[i].setAttribute("transform", "translate("+xpos+", "+ypos+") rotate(0) scale (0.1, "+sy+") translate(-50, -50)");
+  	sy += veraenderung;
+  	
+  	if ((i+1)%5 == 0 ){
+  		veraenderung *= -1;
+  	}
+  }
+}
+animate(ani);
+
+
+</script>
+
+</body>
+</html>

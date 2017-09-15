@@ -1,0 +1,4 @@
+Auch wenn es auf den ersten Blick nicht danach aussah: Die vorherige Variante war ebenso eine Reihung mit Drehung. Durch den Winkel von 45° erscheint es aber sehr linear.
+
+Hier meine zweite Variante der Reihen nach Regeln.
+Die effektivste Vorgehensweise, um die Auswirkungen zu studieren, ist hier, sich verschiedene Möglichkeiten der Transformierung zu überlegen, dabei aber mit jeder Reihe nur einen Wert zu ändern. 

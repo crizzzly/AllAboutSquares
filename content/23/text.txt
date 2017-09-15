@@ -1,0 +1,2 @@
+Nach einer kurzen Einführung in Javascript durften wir schon die ersten Beispiele aus Kapitel 1 in js umsetzen. Dies gestaltete sich anfangs schwieriger als gedacht, da sich die Transformation in js doch etwas anders verh&auml;lt als die manuell umgesetzte Transformation in Illustrator. 
+Zudem war festzustellen, dass Verschiebungen um relative Werte in den js-loops nur schwer umzusetzen sind, weshalb diese hier ausgelassen wurden.

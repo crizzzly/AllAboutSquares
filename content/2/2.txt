@@ -1,0 +1,1 @@
+In der folgenden Reihe musste das n&auml;chste Quadrat immer um 30° gedreht, auf 75% skaliert und verschoben werden, bis der Mittelpunkt auf der Kante des vorherigen Quadrats lag. 

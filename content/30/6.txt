@@ -1,0 +1,15 @@
+Hier dürfte der Drehpunkt sogar außerhalb liegen. Aber auch da sollte mal ausprobiert werden!
+
+<code>
+for (var i = 0; i<rects.length; i++){
+  sy*=0.99;
+
+  var calc = (i*10)+30;
+  var xpos = map(calc, 0, 600, 0, 300);
+  var ypos = 150;
+
+  var rotation = i*5;
+
+  rects[i].setAttribute("transform", "translate("+xpos+", "+ypos+")rotate("+rotation+")  scale ("+sx+","+sy+") rotate("+rotation+") translate(0,100)");
+  }
+</code>

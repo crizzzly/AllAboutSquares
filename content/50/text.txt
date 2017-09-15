@@ -1,0 +1,1 @@
+In diesem Kapitel möchte ich mich mit SquareGrids beschäftigen. Diese können, wie man sieht, alle in der selben Größe sein, oder etwa jedes 2. anders. man kann sie auch so gestalten, dass nur Squares an Stellen mit gerader Zahl größer sind als die anderen. Oder eben andersrum. 

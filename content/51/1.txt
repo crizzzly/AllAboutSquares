@@ -1,0 +1,30 @@
+Dass die Quadrate bis zu nem bestimmten Punkt größer werden & dann wieder kleiner, habe ich gelöst, indem ich die Werte min und max eingeführt habe. die Variable change bestimmt, um welchen Wert sich die Größe ändert. Nach dem Loop, der das Grid erzeugt wird geprüft, ob die Skalierung bereits bei min oder max angekommen ist. falls das der fall ist, wird change einfach negiert.
+<code>
+var max = 0.4;
+var min = 0.2;
+var scale = 0.4;	
+var change = 0.01;
+
+var ani = function(f){
+	if(f>400){
+		exit;
+	}
+	clearAll();
+	scale -= change;
+
+	for (var i = 0; i < 11; i++){
+		for(var j = 0; j<11; j++){
+				var xpos = i*50+50;
+				var ypos = j*50+50;
+				createNode('rect', {height:100, width:100, transform:"translate("+xpos+","+ypos+"),  scale("+scale+"), translate(-50, -50)"});
+		}
+	}
+
+	if (scale > max){
+		change *= -1;
+	}
+	if (scale < min){
+		change *= -1;
+	}
+}
+animate(ani);

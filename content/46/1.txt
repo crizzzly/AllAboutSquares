@@ -1,0 +1,41 @@
+Um die Punkte auf dem Kreis zu berechnen, muss man lediglich die Anzahl der Punkte bestimmen, die gezeichnet werden sollen. Anschließend setzt man diese Zahl in die Formel zur Berechnung des Umkreises, um dann das Ergebnis in ein Array f&uuml;r die x & y-Koordinaten zu speichern.
+Um jeden einzelnen Punkt miteinander zu verbinden, bildet man zwei verschachtelte Schleifen, mit denen X und Y an der Stelle [i] mit X und Y an der Stelle [j] zu verbinden.
+
+<code>
+//X u Y Koordinaten vom Kreis, dessen Punkte berechnet werden sollen
+var xm = 300; 
+var ym = 300;
+var r = 200;
+
+var num = 30; //(Anzahl der Punkte im Kreis)
+var limit = 30; //für die Animation
+var change = -1;
+
+//Koordinaten und radius der zu berechnenden Punkte
+var xValue = []; 
+var yValue = [];
+var radius = 3;
+
+var color = "black";
+
+var ani = function(f){
+....
+
+for (var i = 0; i<num; i++){
+xValue[i] = (r* Math.cos(i*2*Math.PI/num))+xm;
+yValue[i] = (r* Math.sin(i*2*Math.PI/num))+ym;
+
+createNode('ellipse', {cx:xValue[i], cy:yValue[i], rx:radius, ry:radius, stroke:"black",  fill:"black"});
+}
+
+for (var i = 0; i<(num); i++){
+for (var j = 0; j<num; j++){
+createNode('line',{x1:xValue[i], y1:yValue[i], x2:xValue[j], y2:yValue[j], stroke:color, strokeWidth:1});
+}
+}
+if (num > limit){change *=-1;}
+
+if (num <0){change *= -1;}
+}
+}
+animate(ani);

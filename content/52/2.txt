@@ -1,0 +1,11 @@
+Selbstverständlich kann man selbes auch erreichen, indem man die Variable für die Rotation mit += hochzählt. 
+Damit für die Animation nicht allzuviel Rechnenleistung verschwendet wird, wird abgebrochen, sobald die Funktion ani 400 mal aufgerufen wurde.
+<code>
+var ani = function(f){
+	if(f>400){
+		exit;
+	}
+	
+	clearAll();
+	rot += 1;
+</code>

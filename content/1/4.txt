@@ -1,0 +1,21 @@
+Um die Kombination der Möglichkeiten abzuschließen, wurde in diesem Beispiel wieder auf 90% skaliert und mit jedem Schritt um 5% erhöht, verschoben wurde wieder so weit, bis die Ecke des zfolgenden Quadrats auf dem Mittelpunkt des vorherigen Quadrats liegt.
+
+<!-- An image will be scaled to 600 pixels width. The height is automatically adjusted.
+
+You might also use a code tag to explain some part of your code in this text. Although it's a quite condensed font to display the code, the lines might not fit in the coloumn. In these cases please care about proper line breaks and indentation. Use spaces, not tabs for indentation.
+<code>
+<g transform="rotate(0 300 300)">
+  <rect x="285" y="105" width="30" 
+        height="30"/>
+  <rect x="285" y="150" width="30" 
+        height="30"/>
+  <rect x="285" y="195" width="30" 
+        height="30"/>
+  ...
+  <rect x="285" y="420" width="30" 
+        height="30"/>
+  <rect x="285" y="465" width="30" 
+        height="30"/>
+</g>
+</code>
+-->

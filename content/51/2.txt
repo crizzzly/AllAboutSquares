@@ -1,0 +1,41 @@
+Analog bei dem Beispiel mit verschieden großen Quadraten:
+<code>
+var max = 0.5;
+var min = 0.3;
+var scale = 1;
+var scaleKleiner = max;
+var scaleGroesser = min;	
+var change = 0.01;
+
+var ani = function(f){
+	if (f > 400) {
+		exit;		
+	}
+	clearAll();
+
+	scaleKleiner -= change;
+	scaleGroesser += change;
+
+	for (var i = 0; i < 11; i++){
+		for(var j = 0; j<11; j++){
+			if ((i + j) % 2 == 0){
+				scale = scaleKleiner;
+			}
+			else{
+				scale = scaleGroesser;
+			}	
+				var xpos = i*50+50;
+				var ypos = j*50+50;
+				createNode('rect', {height:100, width:100, transform:"translate("+xpos+","+ypos+"),  scale("+scale+"), translate(-50, -50)"});
+		}
+	}
+
+	if (scale > max){
+		change *= -1;
+	}
+	if (scale < min){
+		change *= -1;
+	}
+}
+animate(ani);
+</code>

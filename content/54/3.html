@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GMYND Sketch</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../../lib/gmynd_base.css">
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600"></svg>
+
+<div>
+ transformierte Pfosten in mehreren Reihen
+</div>
+
+<script src="../../lib/gmynd.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+var ani = function(f){
+	if (f>400){
+		ani.break;
+	}
+	clearAll();
+
+
+	for (var j = 0; j<30; j++){
+		for (var i = 0; i<30; i++){
+
+			var xpos = i * 20 + 30;
+			var ypos = j*20 + 30;
+			var dx = (Mouse.x -xpos)/7;
+			var dy = (Mouse.y - ypos)/7;
+			var s =  - Math.sqrt(dx*dx + dy*dy) / 200;
+			var winkel = 0;
+
+			createNode("rect", {width:100, height:100, transform:"translate("+xpos+", "+ypos+")  rotate("+winkel+") scale( "+s+") translate(-50, -50)"});					
+		}	
+	}
+	var element = createNode('circle', {cx:300, cy:300, r:50, fill:"black"});
+	var x = Mouse.x;
+	var y = Mouse.y;
+	element.setAttribute('cx', x);
+	element.setAttribute('cy', y);
+
+    if (Mouse.button == 0) {
+      element.setAttribute('r', 80);
+    } else {
+      element.setAttribute('r', 50);
+    }
+}
+animate(ani);
+// ======== End of scripts =======
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+Hier wollte ich lediglich die Punkte und die Linien in Regenbogenfarben einfärben.
+Dazu habe ich die Funktionen für die Fabrberechnung in das Skript eingebaut. Beim Test ist mir aufgefallen, dass dadurch die Variable 'r' (Radius des Kreises, auf dem die Punkte verteilt werden) mit dem Sinus-Wert von Rot (zur Farbberechnung) überschrieben wurde. Das Ergebnis sieht interessant aus!
+<code>
+//farbwerte umrechnen
+var frequency = .3; //used for change colors by sine wave
+  function componenToHex(c){
+    var hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex: hex;
+  }
+  function RgbToHex(rot, grün, blau){
+    return "#"+ componenToHex(rot)+""+ componenToHex (grün)+"" + componenToHex(blau)+"";
+  }
+
+var r = Math.floor(Math.sin(frequency*i + 0) * 127 + 128);
+var g = Math.floor(Math.sin(frequency*i + 2) * 127 + 128);
+var b = Math.floor(Math.sin(frequency*i + 4) * 127 + 128);
+
+var color = RgbToHex(r, g, b);
+
+
+  </code>

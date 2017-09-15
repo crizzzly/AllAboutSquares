@@ -1,0 +1,15 @@
+zweite Version
+<code>
+sy*=0.99;
+
+var calc = (i*10)+200;
+var xpos = calc;//map(calc, 0, 1200, 0, 600);
+var ypos = 250;//+ j*10;
+
+var tx=400*Math.sin(f/20)+200;
+
+var rotation = i*5;
+
+rects[i].setAttribute("transform", "translate("+xpos+", "+ypos+")rotate("+rotation+")  scale ("+sx+","+sy+") rotate("+rotation+") translate(100, "+tx+")");
+rects2[i].setAttribute("transform", "translate("+xpos+", "+ypos+")rotate("+rotation+")  scale ("+sx+","+sy+") rotate("+rotation+") translate("+tx+",0)");
+</code>

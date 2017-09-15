@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GMYND Sketch</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../../lib/gmynd_base.css">
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600"></svg>
+
+<div>
+  Und der Kreis macht "huiuiui"
+</div>
+
+<script src="../../lib/gmynd.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+
+    //var circleArray = [];
+
+
+
+//Variablen für Winkel, x&y, kreis etc
+
+//var theta = [0, Math.PI / 6, Math.PI / 4, Math.PI / 3, Math.PI / 2, 2 * (Math.PI / 3), 3 * (Math.PI / 4), 5 * (Math.PI / 6), Math.PI, 7 * (Math.PI / 6), 5 * (Math.PI / 4), 4 * (Math.PI / 3), 3 * (Math.PI / 2), 5 * (Math.PI / 3), 7 * (Math.PI / 4), 11 * (Math.PI / 6)];
+
+var xpos = 300;
+var ypos = 300;
+var radius = 100;
+
+var countsUp = 0;
+var countsDown = 0;
+
+//var ani = function(f){
+	
+	//clearAll();
+
+var scale = 3;
+
+var radiusAlt = radius;
+var abstand = 0;
+var opac = 0.2;
+
+//createNode("circle", {cx:0, cy:0, r:100, fill:farbe,  stroke:"white", transform:"translate(300, 300), scale ("+scale+")"});
+
+//attribute der einzelnen rechtecke des arrays setzen
+
+
+	for (var i = 0 ; i<15 ; i++){
+
+		abstand = (radiusAlt - radius) * 2;
+
+		
+
+		//xpos = (Math.round(radius * (Math.cos(theta[i]))) + 70);
+		//ypos = (Math.round(radius * (Math.sin(theta[i]))) ) +70;
+
+		createNode("circle", {cx:0, cy:0, r:radius, fill:"black",  stroke:"white", opacity:opac, transform:"translate("+xpos+", "+ypos+"), scale ("+scale+")"});
+		scale *= 0.9;
+		opac *= 1.2;
+
+		radiusAlt = radius;
+		radius = radius*0.9;
+	
+
+	 
+	}
+//}//Ende ani function
+
+//animate(ani);
+
+
+</script>
+
+</body>
+</html>

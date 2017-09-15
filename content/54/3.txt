@@ -1,0 +1,11 @@
+Big Brother is watching you!
+<code>
+...
+var dx = (Mouse.x -xpos)/7;
+var dy = (Mouse.y - ypos)/7;
+var s =  - Math.sqrt(dx*dx + dy*dy) / 200;
+var winkel = 0;
+
+createNode("rect", {width:100, height:100, transform:"translate("+xpos+", "+ypos+")  rotate("+winkel+") scale( "+s+") translate(-50, -50)"});	
+...
+</code>

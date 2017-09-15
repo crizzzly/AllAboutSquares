@@ -1,0 +1,21 @@
+Hier ist jedes zweite Quadrat größer wie das andere. Um dies zu erreichen, muss man als Bedingung für die andere Größe abfragen, ob (i+j)%2 = 0 ergibt:
+<code>
+var scaleKleiner = 0.3;
+var scaleGroesser = 0.5;
+var scale;
+
+for (var i = 0; i < 11; i++){
+	for(var j = 0; j<11; j++){
+		if ((i+j)%2 == 0){
+			scale = scaleGroesser;
+		}
+		else{
+			scale = scaleKleiner;			
+		}
+
+		var xpos = i*50+50;
+		var ypos = j*50+50;
+		createNode('rect', {height:100, width:100, transform:"translate("+xpos+","+ypos+"), scale("+scale+"), translate(-50, -50)"});
+	}
+}
+</code>

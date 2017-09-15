@@ -1,0 +1,1 @@
+In Prozent ausgedr&uuml;ckt ergibt eine Verringerung der Seitenlängen um 20 Pixel eine Skalierung auf 83,33%. Wie in diesem Beispiel zu sehen. Verschoben wurde hier allerdings, bis die Kanten auf der rechten Seite aufeinander liegen.

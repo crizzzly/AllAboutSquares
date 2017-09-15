@@ -1,0 +1,2 @@
+Wenn man diese Reihe genauso fortsetzt, hat man schnell ein Quadrat, das mindestens ein Viertel der verfügbaren Fläche füllt.
+Hier wurde wieder um 10 Pixel nach rechts verschoben und auf 83,33% skaliert, jedoch mit jedem Schritt um 5% erhöht.

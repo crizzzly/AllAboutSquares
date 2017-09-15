@@ -1,0 +1,26 @@
+Jetzt wird es etwas komplexer. Um Punkte auf den Außenrand des Kreises zu setzen, muss man mit einigen Formeln hantieren:
+<code>
+//X u Y Koordinaten vom Kreis, dessen Punkte berechnet werden sollen
+var xm = 300; 
+var ym = 300;
+var r = 250; //Radius 
+
+//Koordinaten der zu berechnenden Punkte
+var x = []; 
+var y = [];
+var radius = 3;
+
+//Für Bogenmaß 
+var phi = 0; 
+
+var i = 0;
+
+do {
+  x[i] = xm + r * Math.cos(phi);
+  y[i] = ym + r * Math.sin(phi);
+
+  createNode('ellipse', {cx:x[i], cy:y[i], rx:radius, ry:radius, stroke:"black",  fill:"black"}); //transform:"translate("+x[i]+","+y[i]+")"
+
+  phi += (Math.PI/16);
+}while (phi <= (2*Math.PI));
+</code>
